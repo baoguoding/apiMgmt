@@ -8,7 +8,7 @@
 		<version>1.3.5.RELEASE</version>
 	</parent>
 	<groupId>com.rs</groupId>
-	<artifactId>apiMgmt</artifactId>
+	<artifactId>rs-apiMgmt</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging> <!-- jar comment -->
 	<name>apiMgmt</name>
