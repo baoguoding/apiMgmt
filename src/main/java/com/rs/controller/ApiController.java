@@ -119,18 +119,18 @@ public class ApiController {
 			paramService.deleteById(param.getParamId());
 		}
 		
-		
-		//add new records
-		for (Iterator iterator = jsonArray.iterator(); iterator.hasNext();) {
-			JSONObject object = (JSONObject) iterator.next();
-			String paramId = object.getString("paramId");
-			param = new Param();
-			param.setApiId(apiId);
-			param.setDescription(object.getString("description"));
-			param.setName(object.getString("name"));
-			paramService.insert(param);
+		if(jsonArray != null){
+			//add new records
+			for (Iterator iterator = jsonArray.iterator(); iterator.hasNext();) {
+				JSONObject object = (JSONObject) iterator.next();
+				String paramId = object.getString("paramId");
+				param = new Param();
+				param.setApiId(apiId);
+				param.setDescription(object.getString("description"));
+				param.setName(object.getString("name"));
+				paramService.insert(param);
+			}
 		}
-		
 	}
 	
 	
