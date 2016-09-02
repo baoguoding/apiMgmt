@@ -83,7 +83,7 @@ public class ApiController {
 		Param param = new Param();
 		param.setApiId(api.getApiId());
 		List<Param> paramList = paramService.selectList(param);
-		if(!paramList.isEmpty()){
+		if(paramList!= null && paramList.size() > 0){
 			api.setParamList(paramList);
 		}
 		return api;
