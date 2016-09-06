@@ -129,6 +129,9 @@ public class GasHistController {
 			BufferedReader in = new BufferedReader(new InputStreamReader(content, "UTF-8"));
 			String line = "";
 			while ((line = in.readLine()) != null) {
+				
+				r.setCardId(cardId);
+				r.setName(name);
 
 				String str1 = "<li class=\"col-xs-3 text-center\">";
 
