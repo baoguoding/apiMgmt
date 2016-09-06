@@ -69,7 +69,6 @@ public class GasHistController {
 				}
 			}
 		}
-		
 
 		JSONObject object = new JSONObject();
 		object.put("status", "success");
@@ -105,6 +104,15 @@ public class GasHistController {
 		
 		return object;
 
+	}
+	
+	
+	@RequestMapping("/one")
+	Object one(@RequestBody JSONObject parm) {
+		String id = parm.getString("id").trim();
+		GasHist gasHist = new GasHist();
+		gasHist.setCardId(id);
+		return gasHistService.selectList(gasHist);
 	}
 
 	private List<GasHist> process(String path, String cardId, String name) {
